@@ -53,7 +53,7 @@
 <?php
 
     if (isset($_REQUEST['act']) && @$_REQUEST['act'] == '1') {
-        echo '<div class=""></div>'
+        echo '<div class=""></div>';
     }
 
 ?>
