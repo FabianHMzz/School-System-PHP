@@ -20,16 +20,10 @@
     } else {
         ?>
         $error = '<script type="text/javacript">
-        Swal.fire ({
-		    icon: 'danger',
-		    title: 'Contraseña antigua erronea',
-		    timerProgressBar: true,
-		    timer: '3000',
-		    showConfirmButton: false,
-		    allowOutsideClick: false,
-		    allowEscapeKey: false,
-	        allowEnterKey: false,
-	    })   
+        Swal.fire({
+            icon: 'error',
+            title: 'Contraseña antigua incorrecta'
+        })
         </script>';
     }
 <?php
@@ -154,7 +148,7 @@
 
     </div>
     <script src="../js/script.js"></script>
-    <script>src="//cdn.jsdelivr.net/npm/sweetalert2@11"</script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
