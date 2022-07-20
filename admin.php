@@ -1,3 +1,10 @@
+<?php
+
+include("conn.php");
+include("php/checkogin.php")
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
