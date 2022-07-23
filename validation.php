@@ -1,5 +1,7 @@
 <?php
 include('conn.php');
+include('php/checklogin.php');
+
 $user = $_POST['username'];
 $pass = $_POST['password'];
 

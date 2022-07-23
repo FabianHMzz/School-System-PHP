@@ -1,7 +1,7 @@
 <?php
 
 include("conn.php");
-include("php/checkogin.php")
+include("php/checklogin.php");
 
 ?>
 

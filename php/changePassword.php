@@ -2,6 +2,7 @@
 
     session_start();
     include("../conn.php");
+    include ("checklogin.php");
 
     $error = '';
 
@@ -10,7 +11,7 @@
         $newpass = mysqli_real_escape_string($conn, $_POST['newpass']);
         $database =  "SELECT * FROM admin WHERE idAdmin = '".$_SESSION['school_control']."' and password ='".md5($oldpass);
         $connect = $conn -> query($database);
-    }
+
 
     if($connect -> num_rows > 0) {
         $database = "UPDATE admin SET idAdmin ='".md5($newpass)."' WHERE idAdmin = '".$_SESSION['school_control']."'";
@@ -18,16 +19,11 @@
 
         echo '<script type="text/javascript">window.location="changePass.php?act=1";</script>';
     } else {
-        ?>
-        $error = '<script type="text/javacript">
-        Swal.fire({
-            icon: 'error',
-            title: 'Contraseña antigua incorrecta'
-        })
-        </script>';
+
+        $error = '<script src="../js/wrongPass.js"></script>';
     }
-<?php
-    }
+}
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,14 +37,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/changePass.css">
-    <link rel="shortcut icon" href="../img/Instituto_Niels_Bohr.png">
+    <link rel="shortcut icon" href="../img/Instituto_Niels_Borh.png">
 
 </head>
 <?php
 
     if (isset($_REQUEST['act']) && @$_REQUEST['act'] == '1') {
-        echo '<div class=""></div>';
+        echo '<script src="../js/sucessPass.js"></script>';
     }
+
+    echo $error;
 
 ?>
 <body>
@@ -56,7 +54,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="../img/Instituto_Niels_Bohr.png" alt="Instituto_Niels_Borh">
+                    <img src="../img/Instituto_Niels_Borh.png" alt="Instituto_Niels_Borh">
                     <h2>I<span class="primary">N</span>B</h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -101,7 +99,7 @@
             <div class="Fields">
                 <div>
                     <div class="formContainer">
-                        <form>
+                        <form action="changePassword.php" method="POST" id="changePass">
                             <div class="Fields">
                                 <div>
                                     <label for="oldpass">Old Password</label>
@@ -118,7 +116,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-three">Change Password</a></div>
+            <div class="box-3">
+                <button class="btn btn-changePass">
+                    <span>Change Password</span>
+                </button>
+            </div>
             </form>
         </section>
 
@@ -139,7 +141,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="../img/Instituto_Niels_Bohr.png" width="37px" alt="">
+                        <img src="../img/Instituto_Niels_Borh.png" width="37px" alt="">
                     </div>
                 </div>
             </div>
@@ -149,6 +151,14 @@
     </div>
     <script src="../js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+    
+    $(document).ready(function (){
+        $("#changePass").validate({})
+    })
+
+    </script>
 </body>
 
 </html>
