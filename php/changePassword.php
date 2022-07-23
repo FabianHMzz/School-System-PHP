@@ -86,7 +86,7 @@
                     <span class="material-icons-sharp">manage_accounts</span>
                     <h3>Cambiar Contraseña</h3>
                 </a>
-                <a href="#">
+                <a href="logout.php">
                     <span class="material-icons-sharp">logout</span>
                     <h3>Cerrar Sesión</h3>
                 </a>
