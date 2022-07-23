@@ -75,54 +75,66 @@ label {
 
 
 /* Button */
-a.animated-button.thar-three {
-  color: var(--color-dark);
-  cursor: pointer;
-  width: 30%;
-  display: flex;
-  font-size: 1.2rem;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  border: 4px solid burlywood;
-  border-radius: 20px;
-  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-a.animated-button.thar-three:hover {
-  color: var(--color-white) !important;
+.btn-changePass {
   background-color: transparent;
-  text-shadow: nthree;
-}
-
-a.animated-button.thar-three:hover:before {
-  left: 0%;
-  right: auto;
-  width: 100%;
-}
-
-a.animated-button.thar-three:before {
+  border: none;
+  width: 50%;
+  font-size: 20px;
   display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 0px;
-  z-index: -1;
-  content: '';
-  background: burlywood;
-  border-radius: 10px;
-  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  cursor: pointer;
+  margin-left: 14em;
+  font-family: poppins, sans-serif;
 }
+.btn-changePass {
+	color: var(--color-dark);
+	transition: all 0.5s;
+	position: relative;
+  height: 60px;
+  border-radius: 30px;
+}
+.btn-changePass::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(222, 184, 135, 0.448);
+	transition: all 0.3s;
+  border-radius: 30px;
+}
+.btn-changePass:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-changePass::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 2px solid  rgba(222, 184, 135, 0.448);
+	transform: scale(1.2,1.2);
+  border-radius: 30px;
+}
+.btn-changePass:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+}
+
 
 
 /* media queries */
 
 @media screen and (max-width: 1280px) {
-  a.animated-button.thar-three {
-    width: 80%;
+  .btn-changePass {
+    width: 50%;
+    margin-left: 5rem;
   }
 }
 
@@ -136,12 +148,9 @@ a.animated-button.thar-three:before {
     margin-right: 0;
   }
 
-  a.animated-button.thar-three{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5rem;
+  .btn-changePass{
+    width: 50%;
+    margin-left: 15rem;
   }
 }
 
@@ -162,13 +171,6 @@ a.animated-button.thar-three:before {
     padding: 0 2.5rem;
   }
 
-  a.animated-button.thar-three{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
-  }
 
   .right {
     width: 94%;
@@ -220,6 +222,10 @@ a.animated-button.thar-three:before {
   .right #menu-btn {
     display: inline-block;
   }
+
+  .btn-changePass {
+    margin-left: 8em;
+  }
 }
 
 
@@ -240,24 +246,16 @@ a.animated-button.thar-three:before {
     padding: 0 2.5rem;
   }
 
-  a.animated-button.thar-three{
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
+  .btn-changePass {
+    margin-left: 7em;
   }
 }
 
 @media screen and (max-width: 480px) {
 
 
-  a.animated-button.thar-three{
-    width: 62%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 9rem;
+  .btn-changePass {
+    margin-left: 5em;
   }
 }
   
