@@ -66,19 +66,19 @@
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="students.html">
+                <a href="students.php">
                     <span class="material-icons-sharp">groups</span>
                     <h3>Alumnos</h3>
                 </a>
-                <a href="payments.html">
+                <a href="payments.php">
                     <span class="material-icons-sharp">payments</span>
                     <h3>Pagos</h3>
                 </a>
-                <a href="teachers.html">
+                <a href="teachers.php">
                     <span class="material-icons-sharp">person</span>
                     <h3>Maestros</h3>
                 </a>
-                <a href="reports.html">
+                <a href="reports.php">
                     <span class="material-icons-sharp">auto_stories</span>
                     <h3>Reportes</h3>
                 </a>
@@ -155,7 +155,38 @@
     <script>
     
     $(document).ready(function (){
-        $("#changePass").validate({})
+        $("#changePass").validate({
+            rules: {
+                OldPass: {
+                    required: true,
+                    minlength: 6
+                },
+                NewPass: {
+                    required: true,
+                    minlength: 6
+                },
+                ConfPass: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#newpass"
+                }
+            },
+            messages: {
+                OldPass: {
+                    required: "Please enter your old password",
+                    minlength: "Your password must be at least 6 characters long"
+                },
+                NewPass: {
+                    required: "Please enter your new password",
+                    minlength: "Your password must be at least 6 characters long"
+                },
+                ConfPass: {
+                    required: "Please enter your new password",
+                    minlength: "Your password must be at least 6 characters long",
+                    equalTo: "Please enter the same password as above"
+                }
+            }
+        });
     })
 
     </script>
