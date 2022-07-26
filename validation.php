@@ -7,7 +7,7 @@ $pass = $_POST['password'];
 
 session_start();
 
-$_SESSION['user']=$user;
+$_SESSION['username']=$user;
 $_SESSION['password']=$pass;
 
 $consulta="SELECT*FROM admin where username='$user' and password='$pass'";
