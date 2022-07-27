@@ -35,19 +35,19 @@ include("php/checklogin.php");
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="./php/constructionProcess.php" class="">
+                <a href="./php/student.php" class="">
                     <span class="material-icons-sharp">groups</span>
                     <h3>Alumnos</h3>
                 </a>
-                <a href="./php/constructionProcess.php">
+                <a href="./php/payments.php">
                     <span class="material-icons-sharp">payments</span>
                     <h3>Pagos</h3>
                 </a>
-                <a href="./php/constructionProcess.php">
+                <a href="./php/teachers.php">
                     <span class="material-icons-sharp">person</span>
                     <h3>Maestros</h3>
                 </a>
-                <a href="../php/constructionProcess.php">
+                <a href="../php/reports.php">
                     <span class="material-icons-sharp">auto_stories</span>
                     <h3>Reportes</h3>
                 </a>
@@ -66,7 +66,7 @@ include("php/checklogin.php");
         <main>
             <h1>Dashboard</h1>
             <div class="insights">
-                <a href="./php/constructionProcess.php">
+                <a href="./php/student.php">
                     <div class="students">
                         <span class="material-icons-sharp">groups</span>
                         <div class="middle">
@@ -78,7 +78,7 @@ include("php/checklogin.php");
                     </div>
                 </a>
 
-                <a href="./php/constructionProcess.php">
+                <a href="./php/payments.php">
                     <div class="payments">
                         <span class="material-icons-sharp">payments</span>
                         <div class="middle">
@@ -90,7 +90,7 @@ include("php/checklogin.php");
                     </div>
                 </a>
 
-                <a href="./php/constructionProcess.php">
+                <a href="./php/teachers.php">
                     <div class="teachers">
                         <span class="material-icons-sharp">person</span>
                         <div class="middle">
@@ -102,7 +102,7 @@ include("php/checklogin.php");
                     </div>
                 </a>
 
-                <a href="./php/constructionProcess.php">
+                <a href="./php/reports.php">
                     <div class="reports">
                         <span class="material-icons-sharp">auto_stories</span>
                         <div class="middle">
