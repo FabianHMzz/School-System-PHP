@@ -66,19 +66,19 @@
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="students.php">
+                <a href="./student.php">
                     <span class="material-icons-sharp">groups</span>
                     <h3>Alumnos</h3>
                 </a>
-                <a href="payments.php">
+                <a href="./payments.php">
                     <span class="material-icons-sharp">payments</span>
                     <h3>Pagos</h3>
                 </a>
-                <a href="teachers.php">
+                <a href="./teachers.php">
                     <span class="material-icons-sharp">person</span>
                     <h3>Maestros</h3>
                 </a>
-                <a href="reports.php">
+                <a href="./reports.php">
                     <span class="material-icons-sharp">auto_stories</span>
                     <h3>Reportes</h3>
                 </a>
@@ -86,7 +86,7 @@
                     <span class="material-icons-sharp">manage_accounts</span>
                     <h3>Cambiar Contraseña</h3>
                 </a>
-                <a href="logout.php">
+                <a href="./logout.php">
                     <span class="material-icons-sharp">logout</span>
                     <h3>Cerrar Sesión</h3>
                 </a>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="box-3">
-                <button class="btn btn-changePass">
+                <button class="btn btn-changePass" type="submit" name="save">
                     <span>Change Password</span>
                 </button>
             </div>
@@ -185,6 +185,12 @@
                     minlength: "Your password must be at least 6 characters long",
                     equalTo: "Please enter the same password as above"
                 }
+            },
+            errorElement: "em",
+            errorPlacement: function ( error, element ){
+                error.addClass ( "help-block" );
+                element.parents ();
+                
             }
         });
     })

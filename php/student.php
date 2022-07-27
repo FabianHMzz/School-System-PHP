@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/students.css">
-    <link rel="shortcut icon" href="../img/Instituto_Niels_Bohr.png">
+    <link rel="shortcut icon" href="../img/Instituto_Niels_Borh.png">
     
 </head>
 
@@ -18,7 +18,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="../img/Instituto_Niels_Bohr.png" alt="Instituto_Niels_Borh">
+                    <img src="../img/Instituto_Niels_Borh.png" alt="Instituto_Niels_Borh">
                     <h2>I<span class="primary">N</span>B</h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="sidebar">
-                <a href="../admin.html">
+                <a href="../admin.php">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
@@ -34,23 +34,23 @@
                     <span class="material-icons-sharp">groups</span>
                     <h3>Alumnos</h3>
                 </a>
-                <a href="payments.html">
+                <a href="payments.php">
                     <span class="material-icons-sharp">payments</span>
                     <h3>Pagos</h3>
                 </a>
-                <a href="teachers.html">
+                <a href="teachers.php">
                     <span class="material-icons-sharp">person</span>
                     <h3>Maestros</h3>
                 </a>
-                <a href="reports.html">
+                <a href="reports.php">
                     <span class="material-icons-sharp">auto_stories</span>
                     <h3>Reportes</h3>
                 </a>
-                <a href="changePassword.html">
+                <a href="changePassword.php">
                     <span class="material-icons-sharp">manage_accounts</span>
                     <h3>Cambiar Contraseña</h3>
                     </a>
-                <a href="#">
+                <a href="logout.php">
                     <span class="material-icons-sharp">logout</span>
                     <h3>Cerrar Sesión</h3>
                 </a>
@@ -81,7 +81,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="../img/Instituto_Niels_Bohr.png" width="37px" alt="">
+                        <img src="../img/Instituto_Niels_Borh.png" width="37px" alt="">
                     </div>
                 </div>
             </div>
